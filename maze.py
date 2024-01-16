@@ -113,5 +113,39 @@ def path_finding(maze,size):
 
 size=int(input("Enter the Size of the maze (n*n):"))
 maze=mazeCreate(size)
-path_finding(maze,size)
+user_input=None
+
+while(True):
+
+    if(user_input != 1) :           # If user input is 1, printMaze function is getting called by findPath function
+        printMaze(maze,size)
+
+    print()
+    print("1. Print the path : ")
+    print("2. Generate new maze : ")
+    print("3. Exit the game")
+    
+    user_input=int(input("Enter your choice (1/2/3) : "))
+    print()
+    
+    if(user_input == 1):
+        # implement path finding function here
+        path_finding(maze,size)
+
+    elif(user_input == 2):
+        # update the size value here.and generate new matrix on user's choice
+        size = int(input("Enter the size of maze : "))
+        maze=mazeCreate(size)
+    
+    elif(user_input == 3):
+        # End the game here.
+        print()
+        break
+    
+    else:
+        # If this block is entered, the board will be re-displayed and user has to enter a valid option
+        print("Enter a valid option !")
+        print()
+    
+
 

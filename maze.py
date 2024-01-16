@@ -98,7 +98,7 @@ def path_finding(maze,size):
     
     if(len(paths)):
         for i in paths[min_path]:   
-            if((i[0]==1 and i[1]==1) or (i[0]==size and i[1]==size)):
+            if((i[0]==0 and i[1]==0) or (i[0]==size-1 and i[1]==size-1)):
                 continue
             else:
                 maze[i[0]][i[1]] =Fore.GREEN + u'\u25cd' + Fore.RESET

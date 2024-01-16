@@ -96,7 +96,7 @@ def path_finding(maze,size):
     
     path_found=1
     
-    if(len(paths)):
+    if(len(paths)>0):
         for i in paths[min_path]:   
             if((i[0]==0 and i[1]==0) or (i[0]==size-1 and i[1]==size-1)):
                 continue

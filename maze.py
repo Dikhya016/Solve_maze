@@ -110,7 +110,8 @@ def path_finding(maze,size):
         printMaze(maze,size)
     else:
         print("No Path exists for the above maze..!")
-
+        
+# main user input 
 size=int(input("Enter the Size of the maze (n*n):"))
 print("Generated Maze:")
 maze=mazeCreate(size)

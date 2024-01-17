@@ -98,7 +98,7 @@ def path_finding(maze,size):
     
     if(len(paths)>0):
         for i in paths[min_path]:   
-            if((i[0]==0 and i[1]==0) or (i[0]==size-1 and i[1]==size-1)):
+            if((i[0]==0 and i[1]==0) or (i[0]==size-1 and i[1]==size-1)): # here is the condition to not change "S" and "E"
                 continue
             else:
                 maze[i[0]][i[1]] =Fore.GREEN + u'\u25cd' + Fore.RESET
@@ -110,13 +110,13 @@ def path_finding(maze,size):
         printMaze(maze,size)
     else:
         print("No Path exists for the above maze..!")
-        
+
 # main user input 
 size=int(input("Enter the Size of the maze (n*n):"))
 print("Generated Maze:")
 maze=mazeCreate(size)
 user_input=None
-
+# for running functions in loops 
 while(True):
 
     if(user_input != 1) :           # If user input is 1, printMaze function is getting called by findPath function
